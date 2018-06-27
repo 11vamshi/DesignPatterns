@@ -1,0 +1,45 @@
+intent - 
+
+imagine 2 things, first thing always changes state (weather station with sensors) 
+and other thing wants to know whenever the other object changes. its 
+basically moving from
+poll architecture to push architecture. traditionally subscriber keeps on asking
+the other object every second or half, what would u do if there are so many objs
+to track of. so mutating obj is responsible for informing to whoever is interested    
+but the subscriber is responsible for registering. Observee/subject/observable 
+is observed by observer
+
+
+Def - It defines a one to many dependency between objs so that when obj. changes 
+state all of its dependents are notified and updated automatically
+
+We are implementing observable PUSHes update, observer PULLs data
+try to reach bottom of the page to know pbservable PUSHes update and  PUSHes data together
+ 
+IObserveable has 3 methods
+add(Iobserver) , remove(Iobserver), notify()
+book also suggests to have getState(), setState()
+
+
+IObserver 
+update() (called by notify())
+
+
+ConcreteObserable implements(is a) IObserveable
+
+ConcreteObserver implements(is a) IObserver
+
+ 
+Final Note - ConcreteObserver ( contains )has a ConcreteObserable
+
+
+Side note - ideally following single responsibility principle a weatherstation should not be 
+responsible for setting temperature and getting temperature
+
+ 2nd variation does not need observable to be part of observer, in that case, observer not only
+ notifies that there is a change by calling notify but also sends necessary data 
+ (also called push push) 
+
+
+
+Useful Comments

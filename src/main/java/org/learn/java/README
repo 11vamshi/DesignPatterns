@@ -1,0 +1,10 @@
+Design Patterns are not just about how you string objects together 
+but also the intent thus most may almost technically do same thing but their 
+intents are different
+
+Eg proxy, decorator, adapter, facade are almost similar
+
+
+IDisplay interface is not related to observer pattern in any way,it is
+just to say that we have display methods to actually display 
+updated info.

@@ -1,0 +1,55 @@
+let us say a class's method returns " hello world " upon calling speak()
+
+https://www.youtube.com/watch?v=GCraGHx6gso
+
+
+now changing the behaviour of this method without actually changing the contents of
+the class or file. with the Dp what we do instead is actually wrap the class(object) into
+another class(object) and when i send the message speak, i will send the message speak()
+to outer object which in turn sends to inner, which later sends the message to
+outer which will return it back to us and ya keep on doing it indefinitely. this is the
+essence. you wrap the wrapper in another wrapper. this seems convoluted but its valuable
+It is similar to composite which is far more complex. so you have an obj that wraps an
+obj that wraps another obj. the point here , let move to 2nd explanation is that you have 
+obj. in the middle lets refer to it as component, the one wrapping it is a decorator,
+the one wrapping the decorator is a decorator. think of a decorator, the decorator 
+has a component ,& is a component, we will get back to that but essentially when ever 
+you have component u can exchange it with 1st layer decorator or 2nd layer decorator
+obj. you can wrap the original object and pass it around as if it was one of the original
+things. the decorator is same type as core obj. which is simillar to proxy pattern that 
+we talk about later. 
+
+     
+     Def. DP attaches additional responsibilities to an obj. dynamically, decorators 
+     provide a flexible alternatives to subclassing for extending functionality.  
+      
+      
+
+Beverage  example from HeadFirst Dp is over-engineering unnecessarily, rather we can 
+have an Arraylist of condiments and add costs by iterating over the list or it 
+makes sense if we had each decorator providing different functionality
+(behaviour) for cost.  
+ 
+
+rather another example suggested 
+
+by book FileInputSteam decorated by bufferedInputStream which        
+      
+     Take linenumberInputStream and wrap that around BufferedInputStream 
+     that's wrapped around FileInputSteam. Decorator here resembles the thing we
+     are decorating unlike caramel(condiments) is not beverage.
+     
+     
+     
+     possible Use-cases
+     say you want to deprecate a class and u dont want to affect the codebase, 
+     then let the decorator intercept the call and return new value or augment 
+     the value passed by component, thus i can use decorated version at some 
+     places where i am ready to replace old class and non-decorator version 
+     where i can't.     
+     
+     
+     points to remember
+     1. prevents class explosion
+     2. base case is compulsory otherwise decorators are helpless
+     3. decorator is a and has a component should be strictly applicable
