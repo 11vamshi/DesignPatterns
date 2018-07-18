@@ -17,7 +17,7 @@ we decoupled the algorithm from the clients who are using it. whoever is using t
 forced to change when you are changing the algo. If u think about an implementation of a collection
 for example, an implementation of list, if the list had a sorting algo built into it, you can never 
 change the sorting algo but if u are using strategy pattern inject a sorting strategy then the sorting 
-atrategy can vary independently from the list. 
+strategy can vary independently from the list. 
 
 Example from Book
 
@@ -38,8 +38,8 @@ too actually works fine but you can may b start to get this feeling that we are 
 just a thing, we have lots of ducks,
 
 let us say we have mountain duck, names make no sense whatever, moutain duck also has its own fly()
-behaviour, let's say that this flying behaviour is not not being ablle to fly but a different kind of flying 
-behaviour. another duck lets say cloud duck that has its own flying behaviour but what is interesting is that this guy has muntain duck's flying behaviour.
+behavior, let's say that this flying behaviour is not not being able to fly but a different kind of flying 
+behavior. another duck lets say cloud duck that has its own flying behavior but what is interesting is that this guy has muntain duck's flying behaviour.
 
 u can just start to say OK well i need another class flyingWithStyleA and both of these inherit form this class
 But hopefully you are feeling that now we are really treading down a dangerous path, cuz yes that works for
@@ -61,7 +61,7 @@ These are no longer named subclasses in the system, they are a particular config
 behaviors so given a combo of different strategies we happen to call some of these combos different 
 things. so 
 
-if it flies in aparticular way, quacks in a particular way, displayed in a particular way
+if it flies in a particular way, quacks in a particular way, displayed in a particular way
 (although we did not implement it here) we call that a wild duck.  
 
 if it quacks in the different way, flies in a different way, we call it different duck, what i have not talked 
@@ -75,8 +75,8 @@ SO u pass in a behavior and then u execute that behavior in the class, so now du
 how any particular fly/quack behavior actually vary.
 
 
-
-
+from factory method design pattern , 
+This is possible only when u define good abstractions and parameterize them in good way, u suddenly need fewer types,  u turn types into properties
  
 
    

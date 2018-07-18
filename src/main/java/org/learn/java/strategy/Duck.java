@@ -2,7 +2,7 @@ package org.learn.java.strategy;
 
 public class Duck {
 	
-	// never underestimate the power of symantics, in your program make sure u use proper variable names
+	// never underestimate the power of semantics, in your program make sure u use proper variable names
 	
 	IFlyStrategy iFlyStrategy; //= can initialize but it would not be that flexible, 
 							   // significantly less composable
